@@ -4,33 +4,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Include Bootstrap for styling -->
-  <link rel="stylesheet" href= 
-"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> 
-  
-  <style> 
-    .qr-code {
-	  width: 250px;
-      max-width: 75%; 
-      margin: 10px; 
-    }  
-	.container-fluid {
-	  margin: 10px;
-	}
-    .btn {
-	  background-color: #009344;
-	  color: white;
-	}
-	.btn:hover {
-  	  background-color: #007034;
-	  color: white;
-	}
-	.form-control {
-	  outline: #009344; 
-	}
-  </style> 
-  
-  <title>QR Code Generator</title> 
+ <!-- Include Bootstrap for styling -->
+<link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="styles.css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<title>QR Code Generator</title> 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -41,8 +20,8 @@
        this will change according to the 
        data entered later -->
       <img src= 
-"https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=500x500&chld=L|0"
-        class="qr-code img-thumbnail img-responsive" > 
+"https://i.imgur.com/mARCJbv.png"
+        class="qr-code img-thumbnail img-responsive" alt="https://i.imgur.com/mARCJbv.png"> 
     </div> 
   <!-- Name -->
     <div class="form-horizontal"> 
@@ -107,6 +86,7 @@
       </div> 
     </div> 
   </div> 
+<div id="snackbar">Please fill out all required information...</div>
 </div>
 </div>
   <script src= 
@@ -131,7 +111,13 @@
   		let data = $('#name').val()+','+$('#phone').val()+','+$('#email').val()
         // Generate the link that would be 
         // used to generate the QR Code 
-        // with the given data  
+        // with the given data
+		if ($('#name').val() == "" || $('#phone').val() == "" ||$('#email').val() == ""){
+			var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		}
+		  else{
         let finalURL = 
 'https://chart.googleapis.com/chart?cht=qr&chl=' + 
           htmlEncode(data) + 
@@ -139,7 +125,9 @@
   	
         // Replace the src of the image with 
         // the QR code image 
-        $('.qr-code').attr('src', finalURL); 
+        $('.qr-code').attr('src', finalURL);
+		
+		 }
       }); 
     }); 
   </script> 

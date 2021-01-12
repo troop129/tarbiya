@@ -15,7 +15,7 @@ generate.addEventListener('click', () => {
     };
 
     if (!(data.name || data.value || data.email)) {
-        // SHOW SNACKBAR FOR 3s IF THERE IS MISSING DATA
+        // SHOW SNACKBAR FOR 3 SECONDS IF THERE IS MISSING DATA
 
         snackbar.classList.add('show');
 

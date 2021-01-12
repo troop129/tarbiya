@@ -1,62 +1,65 @@
 <!doctype html>
 <html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Include Bootstrap for styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles.css">
-    <title>QR Code Generator</title>
-</head>
-<body>
-<div class="container-fluid">
-    <div class="text-center qr-holder">
-        <img src="img/tarbiya.png" class="qr-code img-thumbnail img-responsive" alt="Tarbiya Logo" id="target">
-    </div>
-
-    <div class="form-horizontal">
-        <!-- Name -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="name">Name:</label>
-            <div class="col-sm-10">
-                <input type="text" size="60" maxlength="60" class="form-control" id="name" placeholder="Enter Name" />
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Include Bootstrap for styling -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="styles.css">
+      <title>QR Code Generator</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+      <link rel="manifest" href="img/site.webmanifest">
+      <link rel="shortcut icon" href="img/favicon.ico">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="msapplication-config" content="img/browserconfig.xml">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="text-center qr-holder">
+            <img src="img/tarbiya.png" class="qr-code img-thumbnail img-responsive" alt="Tarbiya Logo" id="target">
+         </div>
+         <div class="form-horizontal">
+            <!-- Name -->
+            <div class="form-group">
+               <label class="control-label col-sm-2" for="name">Name:</label>
+               <div class="col-sm-10">
+                  <input type="text" size="60" maxlength="60" class="form-control" id="name" placeholder="Enter Name" />
+               </div>
             </div>
-        </div>
-
-        <!-- Phone -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="phone">Phone:</label>
-            <div class="col-sm-10">
-                <input type="number" size="60" maxlength="60" class="form-control" id="phone" placeholder="Enter Phone" />
+            <!-- Phone -->
+            <div class="form-group">
+               <label class="control-label col-sm-2" for="phone">Phone:</label>
+               <div class="col-sm-10">
+                  <input type="number" size="60" maxlength="60" class="form-control" id="phone" placeholder="Enter Phone" />
+               </div>
             </div>
-        </div>
-
-        <!-- Email -->
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="email">
-                Email:
-            </label>
-            <div class="col-sm-10">
-                <input type="email" size="60" maxlength="60" class="form-control" id="email" placeholder="Enter Email" />
+            <!-- Email -->
+            <div class="form-group">
+               <label class="control-label col-sm-2" for="email">
+               Email:
+               </label>
+               <div class="col-sm-10">
+                  <input type="email" size="60" maxlength="60" class="form-control" id="email" placeholder="Enter Email" />
+               </div>
             </div>
-        </div>
-
-        <!-- Buttons -->
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="button" class="btn btn-default" id="generate">
-                    Generate
-                </button>
-                <a class="btn btn-default" id="download">
-                    Download
-                </a>
+            <!-- Buttons -->
+            <div class="form-group">
+               <div class="col-sm-offset-2 col-sm-10">
+                  <button type="button" class="btn btn-default" id="generate">
+                  Generate
+                  </button>
+                  <a class="btn btn-default" id="download">
+                  Download
+                  </a>
+               </div>
             </div>
-        </div>
-        <div id="snackbar">Please fill out all required information...</div>
-    </div>
-	<script src="script.js"></script>
-</div>
-</body>
+            <div id="snackbar">Please fill out all required information...</div>
+         </div>
+         <script src="script.js"></script>
+      </div>
+   </body>
 </html>

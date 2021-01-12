@@ -1,3 +1,2 @@
 # Tarbiya QR Scanner Web App
-Tarbiya QR Scanner
-Scanner app
+The online web app of the qr check-in for jumaa

@@ -1,4 +1,4 @@
-const target = document.getElementById('target');
+            const target = document.getElementById('target');
             const download = document.getElementById('download');
             const snackbar = document.getElementById('snackbar');
             const generate = document.getElementById('generate');

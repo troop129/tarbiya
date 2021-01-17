@@ -72,15 +72,15 @@
             const phone = document.getElementById('phone');
             const email = document.getElementById('email');
             const vyes = document.getElementById('yes');
-            var status = 'FALSE';
+			const vno = document.getElementById('no');
+            var status = '';
             
-            var vac = vyes.checked;
             
             generate.addEventListener('click', () => {
                // COLLECT FORM DATA
-               if (vyes.innerHTML == vac){
+               if (vyes.checked){
             status = 'TRUE';
-            } else{
+            } else if (vno.checked){
             status = 'FALSE';
             }
             const data = 
